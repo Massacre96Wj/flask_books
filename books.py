@@ -115,7 +115,7 @@ def index():
         author_name = author_form.author.data
         book_name = author_form.book.data
 
-        author = Author.query.filter_by(name=author_form).first()
+        author = Author.query.filter_by(name=author_name).first()
         if author:
             book = Book.query.filter_by(name=book_name).first()
             if book:
